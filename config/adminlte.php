@@ -388,5 +388,20 @@ return [
                 ],
             ],
         ],
+        'LightBox' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '/vendor/lightbox/css/lightbox.min.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '/vendor/lightbox/js/lightbox.min.js',
+                ],
+            ],
+        ],
     ],
 ];

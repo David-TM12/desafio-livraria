@@ -18,7 +18,7 @@ class LivroDataTable extends DataTable
             ->eloquent($query)
             ->addColumn('capa', function ($l) {
                 $capa = UploadService::getUrlArquivo($l->capa);
-                return view('restrito.livro.capa_datatable', compact('capa'));
+                return view('restrito.livro.capa_datatable', compact('capa','l'));
             })
             ->addColumn('Ação', function ($l) {
                 return view('restrito.datatable.acoes_padrao', [
