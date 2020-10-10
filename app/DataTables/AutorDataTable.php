@@ -16,7 +16,7 @@ class AutorDataTable extends DataTable
     {
         return datatables()
             ->eloquent($query)
-            ->addColumn('action', function ($a) {
+            ->addColumn('Ações', function ($a) {
                 return view('restrito.datatable.acoes_padrao', [
                     'editar' => route('restrito.autors.edit', $a),
                     'excluir' => route('restrito.autors.destroy', $a)
@@ -53,7 +53,7 @@ class AutorDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            Column::computed('action')
+            Column::computed('Ações')
                   ->exportable(false)
                   ->printable(false)
                   ->width(100)

@@ -20,7 +20,7 @@ class LivroDataTable extends DataTable
                 $capa = UploadService::getUrlArquivo($l->capa);
                 return view('restrito.livro.capa_datatable', compact('capa'));
             })
-            ->addColumn('action', function ($l) {
+            ->addColumn('Ação', function ($l) {
                 return view('restrito.datatable.acoes_padrao', [
                     'editar' => route('restrito.livros.edit', $l),
                     'excluir' => route('restrito.livros.destroy', $l)
@@ -54,7 +54,7 @@ class LivroDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            Column::computed('action')
+            Column::computed('Ação')
                   ->exportable(false)
                   ->printable(false)
                   ->width(100)

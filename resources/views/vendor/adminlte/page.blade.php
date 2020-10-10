@@ -88,7 +88,7 @@
                             Swal.fire('Sucesso!', 'Excluído com sucesso', 'success')
                         })
                         .catch(function (err) {
-                            Swal.fire('Sucesso!', 'Ocorreu um erro ao excluir', 'success')
+                            Swal.fire('error!', 'Ocorreu um erro ao excluir', 'error')
                         })
                     
                 }
