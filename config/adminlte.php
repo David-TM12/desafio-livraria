@@ -253,7 +253,7 @@ return [
             'text' => 'Usuários',
             'url'  => 'restrito/users',
             'icon' => 'fas fa-users',
-            'admin' => true
+            'admin' => false
         ],
     ],
 

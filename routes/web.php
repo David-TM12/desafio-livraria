@@ -15,7 +15,11 @@ Route::prefix('restrito')->group(function () {
     Route::namespace('Restrito')->name('restrito.')->group(function () {
         Route::resource('autors', 'AutorController');
         Route::resource('livros', 'LivroController');
-
+        Route::resource('users', 'UserController');
         Route::get('lista-autores', 'AutorController@listaAutores')->name('lista.autores');
+        
     });
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -15,10 +15,12 @@ class LivroController extends Controller
         return $livroDataTable->render('restrito.livro.index');
     }
 
+
     public function create()
     {
         return view('restrito.livro.form');
     }
+
 
     public function store(Request $request)
     {
@@ -33,11 +35,13 @@ class LivroController extends Controller
                     ->withFalha('Erro ao salvar o livro');
     }
 
+
     public function edit(Livro $livro)
     {
         return view('restrito.livro.form', compact('livro'));
     }
 
+    
     public function update(Request $request, Livro $livro)
     {
         $livro = LivroService::update($request->all(), $livro);
